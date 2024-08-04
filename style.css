@@ -1,0 +1,106 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.wrapper{
+    max-width: 80%;
+    background: darkred;
+    padding: 7rem 8rem;
+    border-radius: 15px;
+}
+.wrapper h1{
+    color: #fff;
+    font-size: 33px;
+    text-align: center;
+}
+.wrapper .captcha-area{
+    display: flex;
+    height: 65px;
+    margin: 30px 0 20px;
+    align-items: center;
+    justify-content: center;
+}
+
+.captcha-area .captcha-container{
+    height: 100%;
+    width: 350px;
+    user-select: none;
+    background: #123;
+    position: relative;
+    border-radius: 5px;
+}
+.captcha-container .captcha{
+    position: absolute;
+    left: 60%;
+    top: 50%;
+    width: 100%;
+    color: #fff;
+    font-size: 35px;
+    letter-spacing: 1px;
+    transform: translate(-50%,-50%);
+}
+.wrapper button{
+    border: 0;
+    outline: none;
+    color: #041897;
+    background: #fff;
+    cursor: pointer;
+}
+.captcha-area .reload-btn{
+    border-radius:5px;
+    width: 75px;
+    height: 100%;
+    font-size: 23px;
+    margin-left: 20px;
+}
+.captcha-area i{
+    transition: transform 0.3s ease;
+}
+.wrapper .input-area{
+    height: 60px;
+    width: 100%;
+    position: relative;
+}
+.input-area input{
+    height: 100%;
+    width: 100%;
+    outline: none;
+    font-size: 20px;
+    padding-left: 20px;
+    border-radius: 5px;
+    border: 1px solid #bfbfbf;
+}
+.input-area .check-btn{
+    position: absolute;
+    right: 7px;
+    top: 50%;
+    font-size: 17px;
+    height: 45px;
+    padding: 0 20px;
+    pointer-events: none;
+    background:sienna;
+    color: #fff;
+    transform: translateY(-50%);
+    border-radius: 15px;
+    letter-spacing: 2px;
+    opacity: 0;
+}
+.input-area input:valid + .check-btn{
+    opacity: 1;
+    pointer-events: auto;
+}
+.wrapper .status-text{
+    display: none;
+    font-size: 20px;
+    text-align: center;
+    margin: 20px 0 -5px 0;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
